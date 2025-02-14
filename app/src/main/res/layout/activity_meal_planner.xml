@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MealPlanner"
+    android:background="@drawable/back1">
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="72dp"
+        android:layout_height="86dp"
+        android:src="@drawable/back_btn"
+        app:layout_constraintBottom_toTopOf="@+id/mealPlanTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Monday Post -->
+
+    <TextView
+        android:id="@+id/mealPlanTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Meal Plan for the Week"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mondayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/mealPlanTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/mondayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday: Chicken Salad"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mondayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A delicious chicken salad packed with fresh, crunchy vegetables like crisp lettuce, ripe tomatoes, cucumbers, and bell peppers, topped with tender, grilled chicken breast. The salad is finished off with a light vinaigrette dressing made with olive oil, lemon juice, and herbs, providing a refreshing and healthy meal that’s full of flavor and nutrients. Perfect for a light lunch or dinner to keep you energized throughout the day."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tuesday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tuesdayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/mondayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tuesdayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday: Grilled Fish"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tuesdayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="A healthy grilled fish, delicately seasoned with fresh lemon zest, garlic, and a mix of aromatic herbs such as rosemary, thyme, and parsley. The fish is perfectly grilled to retain its flaky texture and rich flavor, offering a light yet satisfying protein-packed meal. It's served alongside a colorful medley of roasted vegetables, including carrots, zucchini, bell peppers, and cherry tomatoes, all tossed in olive oil and herbs for a roasted, slightly caramelized finish. This dish is not only flavorful but also nutrient-dense, making it a great option for a balanced and wholesome meal."
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Wednesday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/wednesdayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tuesdayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/wednesdayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday: Veggie Stir-Fry"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/wednesdayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A vibrant stir-fry made with a variety of fresh, crisp vegetables, including bell peppers, broccoli, carrots, snap peas, and mushrooms, all sautéed in a hot wok to retain their natural crunch and flavor. The vegetables are tossed in a savory sauce made from soy sauce, garlic, ginger, and a touch of sesame oil, giving the dish a deep umami flavor. It's served with your choice of steamed jasmine rice or noodles, both absorbing the delicious sauce, making each bite satisfying. For an added boost of flavor, a sprinkle of sesame seeds and chopped green onions completes the dish. This veggie stir-fry is both nourishing and customizable, perfect for those seeking a light yet filling meal packed with nutrients."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Thursday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/thursdayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/wednesdayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/thursdayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday: Tofu Scramble"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thursdayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A flavorful tofu scramble made with crumbled firm tofu, cooked to perfection with a mix of vibrant spices like turmeric, paprika, and cumin, which gives it a warm, golden color and a satisfying depth of flavor. The scramble is combined with a variety of fresh vegetables, such as sautéed onions, bell peppers, spinach, and mushrooms, making it both hearty and nutritious. The tofu absorbs the spices and vegetables, creating a dish that’s rich in texture and taste. Served alongside a couple of crispy slices of toast, this dish is a delicious and protein-packed alternative to scrambled eggs, offering a satisfying start to your day or a light, flavorful meal anytime. For extra zest, a dollop of your favorite hot sauce or a sprinkle of fresh herbs like parsley or chives can be added on top."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Friday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fridayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/thursdayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/fridayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday: Chicken Wrap"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fridayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A mouthwatering chicken wrap filled with tender, grilled or roasted chicken breast, sliced into juicy strips. The chicken is seasoned with a blend of herbs and spices to enhance its natural flavor. It’s paired with crisp, fresh lettuce and juicy, vine-ripened tomatoes that add a refreshing crunch and sweetness. A tangy and creamy dressing, made with ingredients like mayonnaise, yogurt, or a zesty vinaigrette, is drizzled generously over the chicken and veggies, creating a perfect balance of flavors. The entire mixture is wrapped up in a soft, warm flour tortilla, giving you the ideal combination of textures with each bite. This wrap is not only satisfying but also packed with protein and nutrients, making it a great choice for a light yet fulfilling meal."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Saturday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/saturdayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/fridayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/saturdayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday: Quinoa Salad"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saturdayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A vibrant and refreshing quinoa salad featuring perfectly cooked quinoa as the base. The quinoa is light yet hearty, with a fluffy texture that pairs beautifully with a mix of crisp, colorful vegetables like cucumber, bell peppers, cherry tomatoes, and red onions. Protein-rich beans, such as black beans or chickpeas, are added to the salad, providing a satisfying bite and extra nutrients. The salad is tossed in a light dressing made from olive oil, lemon juice, and a hint of honey or mustard, which complements the freshness of the vegetables and beans. Fresh herbs like cilantro or parsley add a burst of flavor, and a sprinkle of feta or avocado can elevate the salad even further. This salad is a wholesome, vegan-friendly dish that's perfect for a light lunch or a side dish at dinner, offering a balance of healthy fats, fiber, and protein."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sunday Post -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sundayMealCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/saturdayMealCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/sundayMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday: Smoothie Bowl"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sundayMealDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A vibrant and refreshing quinoa salad featuring perfectly cooked quinoa as the base. The quinoa is light yet hearty, with a fluffy texture that pairs beautifully with a mix of crisp, colorful vegetables like cucumber, bell peppers, cherry tomatoes, and red onions. Protein-rich beans, such as black beans or chickpeas, are added to the salad, providing a satisfying bite and extra nutrients. The salad is tossed in a light dressing made from olive oil, lemon juice, and a hint of honey or mustard, which complements the freshness of the vegetables and beans. Fresh herbs like cilantro or parsley add a burst of flavor, and a sprinkle of feta or avocado can elevate the salad even further. This salad is a wholesome, vegan-friendly dish that's perfect for a light lunch or a side dish at dinner, offering a balance of healthy fats, fiber, and protein."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</android.widget.ScrollView>
+
